@@ -1,9 +1,9 @@
 javascript:
 (
-    function(d)
-    {
-	u=d.location.href;
-	t=d.title.replace(' - Confluence', '');
+    function(d){
+	var u=d.location.href;
+	var t=d.title.replace(' - Confluence', '');
+	var s;
 	if(s=d.querySelector('link[rel="shortlink"]')){
 	    u=s.href;
 	};
