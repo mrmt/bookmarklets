@@ -3,7 +3,7 @@ javascript:
     function(d)
     {
 	var param = [];
-	title = d.querySelector('h2[class="schedule"]').innerText;
+	title = d.querySelector('h2[class="schedule inline_block_grn"]').innerText;
 	param.push(title);
 	date = d.querySelector('span[class="schedule_text_noticeable_grn"]').innerText;
 	param.push(date);
