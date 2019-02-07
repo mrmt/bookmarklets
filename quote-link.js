@@ -17,7 +17,7 @@ global.COPY_TO_CLIPBOARD.getContent = function(d){
     t.allReplace = function(t){
 	var b = this,c;
 	for(c in t){
-	    b = b.replace(new RegExp(c,"g"),t[c]);
+	    b = b.replace(new RegExp(c, "g"),t[c]);
 	}
 	return b;
     }.bind(t);
@@ -26,9 +26,6 @@ global.COPY_TO_CLIPBOARD.getContent = function(d){
 	" - Google スプレッドシート" : "",
 	" - Google スライド" : "",
 	" - Google ドキュメント" : "",
-	":" : "\uff1a",
-	"\\[" : "\uff3b",
-	"\\]" : "\uff3d"
     }) + "\n" + u;
 };
 
