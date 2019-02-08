@@ -24,7 +24,7 @@ global.COPY_TO_CLIPBOARD.copyToClipboard = function(d){
     body.appendChild(area);
     area.select();
     var res = d.execCommand("copy");
-    body.removeChild(a);
+    body.removeChild(area);
     return res;
 };
 global.COPY_TO_CLIPBOARD.copyToClipboard(document);
