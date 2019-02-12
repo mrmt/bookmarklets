@@ -26,7 +26,7 @@ global.COPY_TO_CLIPBOARD.getContent = function(d){
 	" - Google スプレッドシート" : "",
 	" - Google スライド" : "",
 	" - Google ドキュメント" : "",
-    }) + "\n" + u;
+    }) + "\n" + u + "\n";
 };
 
 global.COPY_TO_CLIPBOARD.copyToClipboard = function(d){
