@@ -14,7 +14,7 @@ global.COPY_TO_CLIPBOARD.getContent = function(d){
     }
     var url = 'https://' + d.location.hostname + d.location.pathname + '?event=' + d.querySelector('input[name="event"]').value;
     param.push(url);
-    return param.join("\n").replace(/）/g, ')').replace(/（/g, '(').replace(/ /g, '');
+    return param.join("\n").replace(/）/g, ')').replace(/（/g, '(').replace(/ /g, '') + "\n";
 };
 
 global.COPY_TO_CLIPBOARD.copyToClipboard = function(d){
