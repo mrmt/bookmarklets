@@ -10,8 +10,9 @@ global.COPY_TO_CLIPBOARD.getContent = function(d){
     if(s = d.querySelector('link[rel="canonical"]')){
 	u = s.href;
     };
-    u = u.replace(/#gid=\d+$/,'');
-    u = u.replace(/#slide=id\.[a-z0-9_]+$/,'');
+    u = u.replace(/#gid=\d+$/, '');
+    u = u.replace(/#slide=id\.[a-z0-9_]+$/, '');
+    u = u.replace(/fbclid=[a-zA-Z0-9-]*/, '');
 
     var t = new String(d.title);
     t.allReplace = function(t){
