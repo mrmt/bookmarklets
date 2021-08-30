@@ -27,6 +27,7 @@ global.COPY_TO_CLIPBOARD.getContent = function(d){
 	" - Confluence" : "",
 	" - Google スプレッドシート" : "",
 	" - Google スライド" : "",
+	" - Google ドライブ" : "",
 	" - Google ドキュメント" : "",
     }) + "\n" + u + "\n";
 };
