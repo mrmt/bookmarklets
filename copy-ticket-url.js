@@ -4,20 +4,20 @@ global.COPY_TO_CLIPBOARD = global.COPY_TO_CLIPBOARD || {};
 global.COPY_TO_CLIPBOARD.getContent = function(d){
     var t = new String(d.title);
     t.allReplace = function(t){
-	var b = this,c;
-	for(c in t){
-	    b = b.replace(new RegExp(c, "g"), t[c]);
-	}
-	return b;
+        var b = this,c;
+        for(c in t){
+            b = b.replace(new RegExp(c, "g"), t[c]);
+        }
+    	return b;
     }.bind(t);
-    return t.allReplace({
-	"\\[" : "",
-	"\\]" : "",
-	" - Jira" : "",
-	" - Mixi Jira" : "",
-	" . 課題の表示 . Backlog" : "",
-	'^(.*) · Issue #(\\d+).*' : '#$2 $1'
-    }) + "\n" + d.URL.replace(/#.*/, '') + "\n";
+        return t.allReplace({
+            "\\[" : "",
+            "\\]" : "",
+            " - Jira" : "",
+            " - Mixi Jira" : "",
+            " . 課題の表示 . Backlog" : "",
+            '^(.*) · Issue #(\\d+).*' : '#$2 $1'
+        }) + "\n" + d.URL.replace(/#.*/, '') + "\n";
 };
 
 global.COPY_TO_CLIPBOARD.copyToClipboard = function(d){
