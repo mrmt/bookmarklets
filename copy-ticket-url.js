@@ -2,9 +2,9 @@ javascript:
 var global = window;
 global.COPY_TO_CLIPBOARD = global.COPY_TO_CLIPBOARD || {};
 global.COPY_TO_CLIPBOARD.getContent = function(d){
-    var t = new String(d.title);
+    let t = new String(d.title);
     t.allReplace = function(t){
-        var b = this,c;
+        let b = this,c;
         for(c in t){
             b = b.replace(new RegExp(c, "g"), t[c]);
         }
@@ -21,12 +21,12 @@ global.COPY_TO_CLIPBOARD.getContent = function(d){
 };
 
 global.COPY_TO_CLIPBOARD.copyToClipboard = function(d){
-    var area = d.createElement("textarea");
+    let area = d.createElement("textarea");
     area.textContent = this.getContent(d);
-    var body = d.getElementsByTagName("body")[0];
+    let body = d.getElementsByTagName("body")[0];
     body.appendChild(area);
     area.select();
-    var res = d.execCommand("copy");
+    let res = d.execCommand("copy");
     body.removeChild(area);
     return res;
 };
