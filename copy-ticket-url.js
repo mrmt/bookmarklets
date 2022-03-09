@@ -16,7 +16,7 @@ global.COPY_TO_CLIPBOARD.getContent = function(d){
 	" - Jira" : "",
 	" - Mixi Jira" : "",
 	" . 課題の表示 . Backlog" : "",
-	'^(.*) · Issue #(\\d\\d).*' : '#$2 $1'
+	'^(.*) · Issue #(\\d+).*' : '#$2 $1'
     }) + "\n" + d.URL.replace(/#.*/, '') + "\n";
 };
 
