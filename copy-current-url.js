@@ -5,10 +5,10 @@ global.COPY_TO_CLIPBOARD.getContent = function(d){
     var u = d.URL;
     var s;
     if(s = d.querySelector('link[rel="shortlink"]')){
-	u = s.href;
+        u = s.href;
     };
     if(s = d.querySelector('link[rel="canonical"]')){
-	u = s.href;
+        u = s.href;
     };
     u = u.replace(/#gid=\d+$/, '');
     u = u.replace(/#slide=id\.[a-z0-9_]+$/, '');
@@ -17,18 +17,18 @@ global.COPY_TO_CLIPBOARD.getContent = function(d){
 
     var t = new String(d.title);
     t.allReplace = function(t){
-	var b = this,c;
-	for(c in t){
-	    b = b.replace(new RegExp(c, "g"),t[c]);
-	}
-	return b;
+        var b = this,c;
+        for(c in t){
+            b = b.replace(new RegExp(c, "g"),t[c]);
+        }
+        return b;
     }.bind(t);
     return t.allReplace({
-	" - Confluence" : "",
-	" - Google スプレッドシート" : "",
-	" - Google スライド" : "",
-	" - Google ドライブ" : "",
-	" - Google ドキュメント" : "",
+        " - Confluence" : "",
+        " - Google スプレッドシート" : "",
+        " - Google スライド" : "",
+        " - Google ドライブ" : "",
+        " - Google ドキュメント" : "",
     }) + "\n" + u + "\n";
 };
 
