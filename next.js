@@ -1,8 +1,13 @@
 javascript:
 (
-  function(loc, path){
-    if(matched = path.match(/^(.*)\/([0-9]+)\/*$/)){
-      loc.href = `${matched[1]}/${Number(matched[2])+1}`;
+  function(d, l){
+    let n;
+    if(n = d.evaluate("string(//link[@rel='next']/@href)", d, null, XPathResult.STRING_TYPE, null)){
+      l.href=n.stringValue;
+    }
+    let m;
+    if(m = l.pathname.match(/^(.*)\/([0-9]+)\/*$/)){
+      l.href=`${m[1]}/${Number(m[2])+1}`;
     }
   }
-)(location, location.pathname);
+)(document, location);
