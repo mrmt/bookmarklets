@@ -14,7 +14,7 @@ javascript:
 	    var argv = loc.search.replace(/^\?/,'').split('&');
 	    var argc = argv.length;
 	    while(argc--){
-		if(!argv[argc].match(/^(utm_|fb_ref|fb_action_|fb_source|fbclid|action_object_map|action_type_map|action_ref_map|__from)/)){
+		if(!argv[argc].match(/^(network|placement|argument|dmai|gclid|device|keyword|utm_|fb_ref|fb_action_|fb_source|fbclid|action_object_map|action_type_map|action_ref_map|__from)/)){
 		    c.push(argv[argc]);
 		}
 		kv = argv[argc].split('=');
